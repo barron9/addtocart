@@ -56,6 +56,7 @@ class ViewController: UIViewController {
                     }
                     return result2
                 }))!
+                guard partialCount.count>0 else {return}
                 //check login & token
                 let debugText = "sending to server\n(accumulated# in 2 sec \n\(partialCount.description.replacingOccurrences(of: ",", with: "\n")))"
                 print("\(debugText))")
