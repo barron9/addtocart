@@ -57,9 +57,10 @@ class ViewController: UIViewController {
                     return result2
                 }))!
                 //check login & token
-                print("sending to server\n(accumulated# in 2 sec : \(partialCount))")
+                let debugText = "sending to server\n(accumulated# in 2 sec : \(partialCount))"
+                print("\(debugText))")
                 let loader = LoaderVC()
-                loader.product = accumulatedPartials.debugDescription
+                loader.product = debugText
                 loader.modalPresentationStyle = .fullScreen
                 loader.modalTransitionStyle = .crossDissolve
                 self?.present(loader, animated: true, completion: nil)
