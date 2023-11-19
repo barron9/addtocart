@@ -37,7 +37,21 @@ class LoaderVC : UIViewController {
         let randomtimeoffset:Double = Double(Int.random(in: 3..<4))
         DispatchQueue.main.asyncAfter(deadline: (.now() + randomtimeoffset), execute: {
             [weak self] in
-            self?.dismiss(animated: true)
+            self?.upload(data: (self?.product.data(using: .utf32))!,completion: {[weak self] in
+                self?.dismiss(animated: true)
+            })
         })
+    }
+    
+    func upload(data:Data,completion:@escaping ()->Void) {
+        var reuqest = URLRequest(url: URL(string: "https://00ea8f6e86044937b150f2240aea36d0.api.mockbin.io/")!)
+        reuqest.httpMethod = "post"
+        reuqest.httpBody = data
+        let task = URLSession.shared.dataTask(with: reuqest)
+        task.resume()
+        DispatchQueue.main.async {
+            completion()
+        }
+        
     }
 }
