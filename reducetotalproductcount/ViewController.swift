@@ -34,29 +34,30 @@ class ViewController: UIViewController {
         MyCustomView.register(for:kollektion)
     }
     func bindRx(){
-        partialArrayForAdjustingProductCounts
+        let debouncedObservable = partialArrayForAdjustingProductCounts
             .asObservable()
-           // .buffer(timeSpan: .seconds(4), count: 100, scheduler: MainScheduler.asyncInstance)
-           // .take(until: cancelSubject)
+        let scannedObservable = debouncedObservable
+            .scan([]) { accumulator, feed in
+                return accumulator + [feed]
+            }
             .debounce(.seconds(2), scheduler: MainScheduler.instance)
-            .filter { $0.count != 0}
-            .subscribe({ [weak self] accumulatedPartials in
-                // var result:Double = 0.0
-               // var result2:[String:Double] = [:]
-//                let partialCount: [String:Double] = (accumulatedPartials.element?.reduce(["":0.0], { partialResult, arr in
-//                    for part in arr {
-//                        //  result = 0//partialResult.0 + part.productAmount
-//                        if(result2[part.cartedProductId] != nil){
-//                            result2[part.cartedProductId]! += part.productAmount + 0
-//                        }
-//                        else {
-//                            result2[part.cartedProductId] = part.productAmount + 0
-//                        }
-//                    }
-//                    return result2
-//                }))!
+        
+        scannedObservable
+            .filter({ $0.count>0 })
+            .subscribe({ [weak self] (accumulatedPartials) in
+                var result2:[String:Double] = [:]
+                let partialCount: [String:Double] = (accumulatedPartials.element?.reduce(["":0.0], { partialResult, arr in
+                    for part in arr {
+                        if(result2[part.cartedProductId] != nil){
+                            result2[part.cartedProductId]! += part.productAmount + 0
+                        }else{
+                            result2[part.cartedProductId] = part.productAmount
+                        }
+                    }
+                    return result2
+                }))!
                 //check login & token
-                print("sending to server\n(accumulated# in 2 sec : \(accumulatedPartials))")
+                print("sending to server\n(accumulated# in 2 sec : \(partialCount))")
                 let loader = LoaderVC()
                 loader.product = accumulatedPartials.debugDescription
                 loader.modalPresentationStyle = .fullScreen

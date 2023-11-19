@@ -84,5 +84,197 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2035673B-E0D2-4DCB-A82C-3860646486A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reducetotalproductcount/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "bindRx()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2035673B-E0D2-4DCB-A82C-3860646486A6 - 7c9c3b780342a8ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt;, Swift.Array&lt;reducetotalproductcount.Partials&gt;) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt; in closure #2 (RxSwift.Event&lt;Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt;&gt;) -&gt; () in reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  uuid = "2035673B-E0D2-4DCB-A82C-3860646486A6 - 7c9c3b780342a8ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt;, Swift.Array&lt;reducetotalproductcount.Partials&gt;) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt; in closure #2 (RxSwift.Event&lt;Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt;&gt;) -&gt; () in reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "496">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D89883B5-84AD-4EC7-AB68-4902D7DCE3F5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reducetotalproductcount/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "bindRx()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D89883B5-84AD-4EC7-AB68-4902D7DCE3F5 - 7c9c3b780342a899"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt;, Swift.Array&lt;reducetotalproductcount.Partials&gt;) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt; in closure #2 (RxSwift.Event&lt;Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt;&gt;) -&gt; () in reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "496">
+               </Location>
+               <Location
+                  uuid = "D89883B5-84AD-4EC7-AB68-4902D7DCE3F5 - 7c9c3b780342a899"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt;, Swift.Array&lt;reducetotalproductcount.Partials&gt;) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt; in closure #2 (RxSwift.Event&lt;Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt;&gt;) -&gt; () in reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9DA88F7-296A-403F-B7D2-153BF2969BEB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reducetotalproductcount/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "bindRx()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A9DA88F7-296A-403F-B7D2-153BF2969BEB - c7f587224a709b78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (RxSwift.Event&lt;Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt;&gt;) -&gt; () in reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "A9DA88F7-296A-403F-B7D2-153BF2969BEB - 7c9c3b780342a980"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt;, Swift.Array&lt;reducetotalproductcount.Partials&gt;) -&gt; Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Swift.Double&gt;&gt; in closure #2 (RxSwift.Event&lt;Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt;&gt;) -&gt; () in reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "408">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57982123-5699-4159-8A16-C7CF53D13257"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reducetotalproductcount/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "bindRx()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "57982123-5699-4159-8A16-C7CF53D13257 - b3cb33afe86863a3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "556">
+               </Location>
+               <Location
+                  uuid = "57982123-5699-4159-8A16-C7CF53D13257 - 5f14067ea673b794"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt;, Swift.Array&lt;reducetotalproductcount.Partials&gt;) -&gt; Swift.Array&lt;Swift.Array&lt;reducetotalproductcount.Partials&gt;&gt; in reducetotalproductcount.ViewController.bindRx() -&gt; ()"
+                  moduleName = "reducetotalproductcount"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/4alabs/Downloads/addtocart-main/reducetotalproductcount/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
