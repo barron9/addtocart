@@ -34,15 +34,15 @@ class ViewController: UIViewController {
         MyCustomView.register(for:kollektion)
     }
     func bindRx(){
-        let debouncedObservable = partialArrayForAdjustingProductCounts
+        let observable = partialArrayForAdjustingProductCounts
             .asObservable()
-        let scannedObservable = debouncedObservable
+        let scannedDebounceObservable = observable
             .scan([]) { accumulator, feed in
                 return accumulator + [feed]
             }
             .debounce(.seconds(2), scheduler: MainScheduler.instance)
         
-        scannedObservable
+        scannedDebounceObservable
             .filter({ $0.count>0 })
             .subscribe({ [weak self] (accumulatedPartials) in
                 var result2:[String:Double] = [:]
