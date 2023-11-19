@@ -57,7 +57,7 @@ class ViewController: UIViewController {
                     return result2
                 }))!
                 //check login & token
-                let debugText = "sending to server\n(accumulated# in 2 sec : \(partialCount))"
+                let debugText = "sending to server\n(accumulated# in 2 sec \n\(partialCount.description.replacingOccurrences(of: ",", with: "\n")))"
                 print("\(debugText))")
                 let loader = LoaderVC()
                 loader.product = debugText
