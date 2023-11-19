@@ -42,7 +42,7 @@ class LoaderVC : UIViewController {
             })
         })
     }
-    
+    //https://mockbin.io/bins/00ea8f6e86044937b150f2240aea36d0
     func upload(data:Data,completion:@escaping ()->Void) {
         var reuqest = URLRequest(url: URL(string: "https://00ea8f6e86044937b150f2240aea36d0.api.mockbin.io/")!)
         reuqest.httpMethod = "post"
