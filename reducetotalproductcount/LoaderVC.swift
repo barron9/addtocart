@@ -29,16 +29,16 @@ class LoaderVC : UIViewController {
         act.startAnimating()
         act.layer.position.x = 60
         act.layer.position.y = 200
-
+        
         view.backgroundColor = .systemBlue
         view.addSubview(label)
         view.addSubview(act)
         view.addSubview(products)
-     
+        
         DataMaster.shared.dataTx(data: (self.product.data(using: .utf32))!,completion: {[weak self] in
             self?.dismiss(animated: true)
         },vc: self)
-       
+        
     }
 }
 

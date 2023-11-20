@@ -9,6 +9,7 @@ class ViewController: UIViewController {
     let disposeBag :DisposeBag = DisposeBag()
     var networkcanceler:NetworkCanceler?
     let cancelSubject = PublishSubject<Void>()
+    @IBOutlet weak var toolbarItem: UIBarButtonItem!
     let partialArrayForAdjustingProductCounts = BehaviorRelay<[Partials]>(value: [])
     @IBOutlet weak var kollektion: UICollectionView!
     @IBOutlet weak var sumofproducts: UILabel!
@@ -37,17 +38,20 @@ class ViewController: UIViewController {
         let observable = partialArrayForAdjustingProductCounts
             .asObservable()
         let scannedDebounceObservable = observable
-            .scan([]) { accumulator, feed in
-                return accumulator + [feed]
+            .scan([]) {[weak self] accumulator, feed in
+                let res = accumulator + [feed]
+                self?.toolbarItem.title = "Total count: " + res.count.description
+                return res
             }
+        let debouncedObservable = scannedDebounceObservable
             .debounce(.seconds(2), scheduler: MainScheduler.instance)
         
-        scannedDebounceObservable
+        debouncedObservable
             .filter({ $0.count>0 })
             .subscribe({ [weak self] (accumulatedPartials) in
                 var result2:[String:Double] = [:]
                 let partialCount: [String:Double] = (accumulatedPartials.element?.reduce(["":0.0], { partialResult, arr in
-                    for part in arr {
+                    for part in (arr as! [Partials]) {
                         if(result2[part.cartedProductId] != nil){
                             result2[part.cartedProductId]! += part.productAmount + 0
                         }else{
