@@ -45,7 +45,8 @@
                                 <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="Qid-jf-xaP"/>
+                                    <barButtonItem title="Total Tx: 0" id="Qid-jf-xaP"/>
+                                    <barButtonItem title="Actual Sent: 0" id="jg3-F5-G9X" userLabel="actualsent"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -54,6 +55,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="81b-95-odo"/>
                     <connections>
+                        <outlet property="actualsent" destination="jg3-F5-G9X" id="EH8-hT-8Pc"/>
                         <outlet property="kollektion" destination="gTy-Ot-2St" id="dgx-1I-ysP"/>
                         <outlet property="toolbarItem" destination="Qid-jf-xaP" id="H9x-4Q-N46"/>
                     </connections>

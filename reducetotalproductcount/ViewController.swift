@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var kollektion: UICollectionView!
     @IBOutlet weak var sumofproducts: UILabel!
     let totalProducts = ViewController.generateRandomUUIDArray(count:10000)
+    var actual = 0
+    @IBOutlet weak var actualsent: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         kollektion.delegate = self
@@ -40,7 +42,7 @@ class ViewController: UIViewController {
         let scannedDebounceObservable = observable
             .scan([]) {[weak self] accumulator, feed in
                 let res = accumulator + [feed]
-                self?.toolbarItem.title = "Total count: " + res.count.description
+                self?.toolbarItem.title = "Total Tx: " + res.count.description
                 return res
             }
         let debouncedObservable = scannedDebounceObservable
@@ -61,6 +63,8 @@ class ViewController: UIViewController {
                     return result2
                 }))!
                 guard partialCount.count>0 else {return}
+                self?.actual += 1
+                self?.actualsent.title = "Actual Sent: \(self?.actual.description ?? "")"
                 //check login & token
                 let debugText = "sending to server\n(accumulated# in 2 sec \n\(partialCount.description.replacingOccurrences(of: ",", with: "\n")))"
                 print("\(debugText))")
