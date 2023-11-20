@@ -20,7 +20,7 @@ class LoaderVC : UIViewController {
         
         
         let label = UILabel(frame: CGRect(origin: CGPoint(x: 50, y: 150) , size: CGSize(width: 150, height: 50)))
-        label.text = "adding product..."
+        label.text = "adding products..."
         label.numberOfLines = 6
         label.textColor = .white
         
@@ -37,21 +37,38 @@ class LoaderVC : UIViewController {
         let randomtimeoffset:Double = Double(Int.random(in: 3..<4))
         DispatchQueue.main.asyncAfter(deadline: (.now() + randomtimeoffset), execute: {
             [weak self] in
-            self?.upload(data: (self?.product.data(using: .utf32))!,completion: {[weak self] in
+            DataMaster.shared.dataTx(data: (self?.product.data(using: .utf32))!,completion: {[weak self] in
                 self?.dismiss(animated: true)
-            })
+            },vc: self)
         })
     }
+}
+
+class DataMaster{
+    static var shared = DataMaster()
+    init() {}
     //https://mockbin.io/bins/00ea8f6e86044937b150f2240aea36d0
-    func upload(data:Data,completion:@escaping ()->Void) {
+    func dataTx(data:Data,completion:@escaping ()->Void,vc:UIViewController?) {
         var reuqest = URLRequest(url: URL(string: "https://00ea8f6e86044937b150f2240aea36d0.api.mockbin.io/")!)
         reuqest.httpMethod = "post"
         reuqest.httpBody = data
-        let task = URLSession.shared.dataTask(with: reuqest)
+        reuqest.timeoutInterval = 10
+        let task = URLSession.shared.dataTask(with: reuqest, completionHandler: {data, resp, err in
+            if((err) != nil){
+                let alert = UIAlertController(title: "Error", message: "\(String(describing: err?.localizedDescription ?? ""))", preferredStyle: .alert)
+                let cancel = UIAlertAction(title: "ok", style: .cancel) { act in
+                    completion()
+                }
+                alert.addAction(cancel)
+                DispatchQueue.main.async {
+                    vc?.present(alert, animated: true)
+                }
+                return
+            }
+            DispatchQueue.main.async {
+                completion()
+            }
+        })
         task.resume()
-        DispatchQueue.main.async {
-            completion()
-        }
-        
     }
 }
