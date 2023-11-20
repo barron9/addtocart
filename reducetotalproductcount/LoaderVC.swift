@@ -34,13 +34,11 @@ class LoaderVC : UIViewController {
         view.addSubview(label)
         view.addSubview(act)
         view.addSubview(products)
-        let randomtimeoffset:Double = Double(Int.random(in: 3..<4))
-        DispatchQueue.main.asyncAfter(deadline: (.now() + randomtimeoffset), execute: {
-            [weak self] in
-            DataMaster.shared.dataTx(data: (self?.product.data(using: .utf32))!,completion: {[weak self] in
-                self?.dismiss(animated: true)
-            },vc: self)
-        })
+     
+        DataMaster.shared.dataTx(data: (self.product.data(using: .utf32))!,completion: {[weak self] in
+            self?.dismiss(animated: true)
+        },vc: self)
+       
     }
 }
 
